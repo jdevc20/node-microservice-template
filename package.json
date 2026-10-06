@@ -1,0 +1,57 @@
+{
+  "name": "node-microservice-template",
+  "version": "1.0.0",
+  "description": "Reusable Node.js TypeScript microservice template for the Hilitech platform.",
+  "type": "module",
+  "private": false,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "express",
+    "microservice",
+    "postgresql",
+    "prisma",
+    "hilitech"
+  ],
+  "author": "John Dave Camarin",
+  "license": "ISC",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
+    "@prisma/client": "^7.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "pino": "^10.1.0",
+    "pino-http": "^11.0.0",
+    "pg": "^8.20.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.12.4",
+    "@types/supertest": "^6.0.3",
+    "prisma": "^7.8.0",
+    "supertest": "^7.1.4",
+    "tsx": "^4.22.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}
