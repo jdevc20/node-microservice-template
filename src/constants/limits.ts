@@ -1,0 +1,6 @@
+export const LIMITS = {
+  MAX_REQUEST_BODY_BYTES: "1mb",
+  MAX_PAGE_SIZE: 100,
+  MAX_NAME_LENGTH: 255,
+  MAX_DESCRIPTION_LENGTH: 2_000,
+} as const;
