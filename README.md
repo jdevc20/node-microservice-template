@@ -106,11 +106,7 @@ Then update:
 npm install
 ```
 
-For reproducible CI/deployment installs, commit the generated `package-lock.json` and use:
-
-```bash
-npm ci
-```
+For reproducible CI/deployment installs, generate and commit `package-lock.json` after the first dependency install. Then use `npm ci` in CI. The template Dockerfile uses `npm install` initially because this repository does not commit a generated lockfile.
 
 ### 3. Configure environment
 
@@ -398,6 +394,7 @@ Before deploying a service created from this template:
 - [ ] Add readiness/dependency checks if required.
 - [ ] Configure health checks in the hosting platform.
 - [ ] Do not commit `.env`, secrets, database dumps, or generated build artifacts.
+- [ ] Generate and commit `package-lock.json`.
 - [ ] Verify the service can start from a clean checkout using `npm ci`.
 
 ## Deployment
